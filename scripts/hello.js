@@ -10,21 +10,22 @@ module.exports = function(robot) {
     });
     
     robot.respond(/are you there?/i, function(msg){
-        msg.reply('Yes, usually here, and listening.');
+        msg.reply('Yes, still here, and listening.');
     });
     
     robot.respond(/open the (.*) doors/i, function(res){
-        doorType = res.match[1];
+        var doorType = res.match[1];
         if (doorType == "pod bay"){
             res.reply("I'm afraid I can't let you do that.");
         }else{
             res.reply("Opening " + doorType +" doors");
         }
     });
+
     
     robot.respond(/convert (.*) to btc/i, function(res){
         var usd = res.match[1];
-        res.respond('You want ' + usd + ' in btc?');
+        res.reply('That is about ' + usd * 0.0024 + ' in BTC');
     });
 
 }
