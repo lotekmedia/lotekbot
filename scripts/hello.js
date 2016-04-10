@@ -4,11 +4,7 @@ module.exports = function(robot) {
 
         msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
     });
-    
-    robot.hear(/badger/i, function(msg){
-        msg.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
-    });
-    
+
     robot.hear(/i did it/i, function(msg){
         msg.send("Congratulations! Good job!");
     });
