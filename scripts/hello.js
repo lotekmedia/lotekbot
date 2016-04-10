@@ -10,7 +10,7 @@ module.exports = function(robot) {
     });
     
     robot.respond(/are you there?/i, function(msg){
-        msg.reply('Yes, still here, and listening.');
+        msg.reply('Yes, usually here, and listening.');
     });
     
     robot.respond(/convert \$(.*) to btc/i, function(res){
