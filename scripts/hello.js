@@ -14,6 +14,7 @@ module.exports = function(robot) {
     });
     
     robot.respond(/convert (.*) to btc/i, function(res){
+        console.log('res');
         var usd = res.match[1];
         res.respond('You want ' + usd + ' in btc?');
     });
