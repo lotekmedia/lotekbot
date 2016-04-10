@@ -13,7 +13,7 @@ module.exports = function(robot) {
         msg.reply('Yes, still here, and listening.');
     });
     
-    robot.respond(/convert $(.*) to btc/i, function(res){
+    robot.respond(/convert \$(.*) to btc/i, function(res){
         var usd = res.match[1];
         res.reply('That is about ' + usd * 0.0024 + ' in BTC');
     });
