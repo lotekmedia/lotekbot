@@ -13,6 +13,15 @@ module.exports = function(robot) {
         msg.reply('Yes, usually here, and listening.');
     });
     
+    robot.respond(/open the (.*) doors/i, function(res){
+        doorType = res.match[1]
+        if (doorType == "pod bay"){
+        res.reply("I'm afraid I can't let you do that.");
+        }else{
+        res.reply("Opening #{doorType} doors");
+        }
+    });
+    
     robot.respond(/convert (.*) to btc/i, function(res){
         console.log('res');
         var usd = 'test';
