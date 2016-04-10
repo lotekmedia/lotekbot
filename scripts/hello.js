@@ -14,17 +14,16 @@ module.exports = function(robot) {
     });
     
     robot.respond(/open the (.*) doors/i, function(res){
-        doorType = res.match[1]
+        doorType = res.match[1];
         if (doorType == "pod bay"){
-        res.reply("I'm afraid I can't let you do that.");
+            res.reply("I'm afraid I can't let you do that.");
         }else{
-        res.reply("Opening #{doorType} doors");
+            res.reply("Opening " + doorType +" doors");
         }
     });
     
     robot.respond(/convert (.*) to btc/i, function(res){
-        console.log('res');
-        var usd = 'test';
+        var usd = res.match[1];
         res.respond('You want ' + usd + ' in btc?');
     });
 
