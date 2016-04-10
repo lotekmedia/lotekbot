@@ -12,5 +12,10 @@ module.exports = function(robot) {
     robot.respond(/are you there?/i, function(msg){
         msg.reply('Yes, still here, and listening.');
     })
+    
+    robot.respond(/convert $(.*) to btc/i, function(res){
+        var usd = res.match[1];
+        res.respond('That is about ' + usd * 0.0024 + ' in BTC');
+    })
 
 }
