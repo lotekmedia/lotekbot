@@ -1,3 +1,23 @@
+/*
+# Description:
+#   Allows hubot to run random bot commands
+#
+# Dependencies:
+#   slack adapter
+#
+# Configuration:
+#   Set up hubot token for slack
+#
+# Commands:
+#   mybot Is it a weekend? - mybot: yes or no
+#   mybot Are you here? - mybot: Yes, usually here, and listening.
+#   mybot convert $23 to btc - mybot: That is about 0.0042 in BTC
+# 
+# Author:
+#   lotekmedia
+#   
+#
+*/
 module.exports = function(robot) {
     robot.respond(/is it a (weekend|holiday)\s?\?/i, function(msg){
         var today = new Date();
