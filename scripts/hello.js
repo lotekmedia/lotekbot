@@ -25,6 +25,10 @@ module.exports = function(robot) {
         msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
     });
 
+    robot.hear(/i love slack bots/i, function(msg){
+        msg.reply("I love me too!");
+    });
+
     robot.hear(/i did it/i, function(msg){
         msg.send("Congratulations! Good job!");
     });
